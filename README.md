@@ -14,3 +14,9 @@ interface but write your username, hit the add button and it will
 get your personal github profile!
 
 Maybe in a V2, I'll add a new interface
+
+
+Edit 01
+- A few days ago my project was having inssues with security, I'm sorry about that but I don't know how to 
+fix that, take care when you try to use this file. Please, if someone know how can I fix that, let me know.
+Thanks!
