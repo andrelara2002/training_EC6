@@ -10,11 +10,10 @@ com os recursos webpack e babel para que isso funcione em todos
 os navegadores da web existentes até o momento.
 
 Realmente não acho que funcione em outro computador, mas
-se alguém pudesse testá-lo para mim, obrigado: D. Isso não é lindo
-interface, mas escreva seu nome de usuário, pressione o botão Adicionar e ele
-obtenha seu perfil pessoal no github!
+se alguém pudesse testá-lo para mim, obrigado. não possui uma interface incrivel, mas escreva seu nome de usuário, pressione o botão Adicionar e ele
+vai obter seu perfil pessoal no github!
 
-Talvez em uma V2, eu vou adicionar uma nova interface
+Talvez em uma V2, eu adicione uma nova interface.
 
 
 Edit 01
