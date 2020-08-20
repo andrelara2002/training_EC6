@@ -1,16 +1,26 @@
-# training_EC6
-This is just a training file, if you want to send me some tips about how to get my code better I'm here to listen!
-experience is the best way to get here you want.
+#Treinando ES6+ com uma aplicação web que procura os perfis do github que foram inseridos e retorna seus dados
 
----------------------------------------------------
+Este é apenas um arquivo de treinamento. Se você quiser me enviar algumas dicas sobre como melhorar meu código, estou aqui para ouvir!
+a experiência é a melhor maneira de chegar onde você deseja.
 
-the main goal of this application is to use Javascript EC6+
-with webpack and babel features to get this working in all
-the existing web browsers until this moment.
+-------------------------------------------------- -
 
-I really don't think if it will works in another computer but
-if someone could test it for me, thanks :D. That's not a beautiful
-interface but write your username, hit the add button and it will
-get your personal github profile!
+o principal objetivo deste aplicativo é usar o Javascript EC6 +
+com os recursos webpack e babel para que isso funcione em todos
+os navegadores da web existentes até o momento.
 
-Maybe in a V2, I'll add a new interface
+Realmente não acho que funcione em outro computador, mas
+se alguém pudesse testá-lo para mim, obrigado. não possui uma interface incrivel, mas escreva seu nome de usuário, pressione o botão Adicionar e ele
+vai obter seu perfil pessoal no github!
+
+Talvez em uma V2, eu adicione uma nova interface.
+
+
+Edit 01
+- Alguns dias atrás, meu projeto estava tendo problemas de segurança. Sinto muito, mas não sei como
+corrigir isso, tome cuidado ao tentar usar este arquivo. Por favor, se alguém souber como posso resolver isso, me avise.
+Obrigado!
+
+Para utilizá-lo, clone o repositório, instale as dependências yarn e execute o comando "yarn dev".
+
+Obrigado 😁
