@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building design</title>
-    <link rel="stylesheet" href="stylework.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Alata:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap">
 </head>
+
 <body>
-    <form id="repo-form">
-        <input type="text" name="repository">
-        <button id="submit">Adicionar</button>
-    </form>
-
-    <ul id="repo-list"></ul>
-
+    <div class="header">
+        <a href="andrelara2002.github.io"><img src="./images/hunt-web-logo.svg" id="header-img" alt=""></a>
+    </div>
+    <div class="main">
+        <form class="search-div" id="repo-form">
+            <input type="text" placeholder="Digite um perfil">
+            <button><img src="./images/enter-arrow.svg" alt=""></button>
+        </form>
+        <div class="list">
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="./images/Github.svg" alt="">
+    </div>
     <script src="./bundle.js"></script>
 </body>
+
 </html>

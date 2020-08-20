@@ -1,0 +1,156 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font: 300 2rem Alata;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #ff8345;
+}
+
+.header img {
+    width: 5rem;
+    border-radius: 50%;
+    margin: 1rem auto;
+    transition:200ms;
+}
+.header img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.list {
+    border-radius: 2rem;
+    margin: .1rem auto;
+    display: flex;
+    max-width: 700px;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.search-div {
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+}
+
+.search-div input {
+    border: .2rem solid darkgray;
+    padding: 0 1rem;
+    font-size: 2rem;
+    width: 20rem;
+    margin-right: .4rem;
+    border-radius: 2rem;
+    transition: 300ms;
+}
+
+.search-div input:focus {
+    outline: none;
+    transition: 300ms;
+    border-color: #ef732e;
+}
+
+.search-div button {
+    background: none;
+    border-radius: 50%;
+    border: .2rem solid darkgray;
+    transition: 300ms;
+}
+
+.search-div button:hover {
+    border-color: #ef732e;
+    background: #ff823e;
+    transition: 300ms;
+}
+
+.search-div button:focus {
+    outline: none;
+    transition: 300ms;
+    transform: scale(.9);
+}
+
+.search-div button img {
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: .6rem;
+}
+
+.list img {
+    width: 10rem;
+    border-radius: 50%;
+    margin: .4rem auto;
+}
+
+.list strong {
+    font-size: 2rem;
+}
+
+.list li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+    margin: 2rem 2rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    box-shadow: 5px 5px darkgrey;
+}
+
+.list li p {
+    font-size: 1.4rem;
+}
+
+.list ul {
+    margin-top: 0;
+    padding: 0;
+}
+
+.list a {
+    background: #ef732e;
+    border: 2px solid #cf6025;
+    width: 8rem;
+    height: 1rem;
+    margin: auto auto;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+    font: 700 1rem Alata;
+    color: white;
+    text-decoration: none;
+    box-shadow: 2px 2px darkgray;
+    transition: 200ms;
+}
+
+.list a:hover {
+    transition: 200ms;
+    box-shadow: 2px 2px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #ff8345;
+}
+.footer img{
+    width: 10rem;
+    margin: 1rem auto;
+}

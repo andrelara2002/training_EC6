@@ -1,99 +1,75 @@
-import { Usuario as ClasseUsuario, idade as IdadeUsuario } from "./functions";
 import api from './api'
 
 class App {
     constructor() {
-        this.repositories = [];
-        this.formElement = document.getElementById('repo-form');
-        this.listElement = document.getElementById('repo-list');
+        this.repository = []
+        this.listElement = document.querySelector('ul');
         this.inputElement = document.querySelector('input');
+        this.formElement = document.getElementById('repo-form')
         this.registerHandlers();
+        this.headerImg = document.getElementById('header-img')
     }
-
     registerHandlers() {
         this.formElement.onsubmit = event => this.addRepository(event);
-    }
-
-    setLoading(loading = true){
-        if(loading === true){
-            let loadingElement = document.createElement('span')
-            loadingElement.appendChild(document.createTextNode('Carregando...'))
-            loadingElement.setAttribute('id', 'loading')
-
-            this.formElement.appendChild(loadingElement)
-        }
-        else{
-            document.getElementById('loading').remove();
-        }
+        this.headerImg.onsubmit = event => this.goToHome
     }
 
     async addRepository() {
         event.preventDefault();
-
         const repoInput = this.inputElement.value;
 
-        if (repoInput.length === 0) {
+        if (repoInput.length === 0){
             return;
         }
 
-        this.setLoading()
-
         try {
-           
             const response = await api.get(`/users/${repoInput}`)
 
-            const { avatar_url, login, bio, html_url } = response.data
+            const { avatar_url, login, bio, html_url } = response.data;
 
-            console.log(response)
-
-            this.repositories.push({
+            this.repository.push({
                 name: login,
                 description: bio,
                 avatar_url: avatar_url,
-                html_url: html_url
-            });
-            console.log(this.repositories)
+                link: html_url
+            })
+            console.log(this.repository)
             this.render();
-
-            this.inputElement.value = '';
-        } 
-        
-        catch (err) {
-            alert('algo deu errado')
+            this.inputElement.value = ''
         }
-
-        
-
-        this.setLoading(false)
+        catch(err){
+            alert(err)
+        }
         
     }
 
     render() {
         this.listElement.innerHTML = '';
 
-        this.repositories.forEach(repo => {
-            let imgEl = document.createElement('img')
-            imgEl.setAttribute('src', repo.avatar_url)
+        this.repository.forEach(repo => {
+            const listChildElement = document.createElement('li')
 
-            let titleEl = document.createElement('strong')
-            titleEl.appendChild(document.createTextNode(repo.name))
+            const imgElement = document.createElement('img')
+            imgElement.setAttribute('src', repo.avatar_url)
 
-            let descriptionEl = document.createElement('p');
-            descriptionEl.appendChild(document.createTextNode(repo.description))
+            const titleElement = document.createElement('strong')
+            titleElement.appendChild(document.createTextNode(repo.name))
 
-            let linkEl = document.createElement('a')
-            linkEl.setAttribute('href', repo.html_url)
-            linkEl.setAttribute('target', '_blank')
-            linkEl.appendChild(document.createTextNode('Clique aqui'))
+            const descriptionElement = document.createElement('p')
+            descriptionElement.appendChild(document.createTextNode(repo.description))
 
-            let itemEl = document.createElement('li');
-            itemEl.appendChild(imgEl)
-            itemEl.appendChild(titleEl)
-            itemEl.appendChild(descriptionEl)
-            itemEl.appendChild(linkEl)
+            const linkElement = document.createElement('a')
+            linkElement.setAttribute('href', repo.link)
+            linkElement.appendChild(document.createTextNode('Acessar'))
 
-            this.listElement.appendChild(itemEl)
+            listChildElement.appendChild(imgElement)
+            listChildElement.appendChild(titleElement)
+            listChildElement.appendChild(descriptionElement)
+            listChildElement.appendChild(linkElement)
+
+            this.listElement.appendChild(listChildElement);
         })
     }
-}
-new App()
+}   
+
+new App();
